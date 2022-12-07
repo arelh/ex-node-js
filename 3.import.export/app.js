@@ -9,22 +9,32 @@
 //require- You can directly run the code with require statement.
 //import- To run a program containing import statement you have to use experimental module feature flag.
 
-
-
 //! How can you enable using the import syntax using node js.
 // 1. we can name the file .mjs instead of .js
 // 2.  or we can add "type" : "module" in the package.json
-
 
 //! Give 2 node.js environment variables that are not available  when using the import syntax.
 // 1. __dirname
 // 2. __filename
 
+// const showCarName = require("./car"); //pass the car js in app
 
+// showCarName("kia");
 
+// console.log("hhh");
 
-const showCarName = require("./car"); //pass the car js in app
+const add = require("./car");
+const sum = add(4, -2);
+console.log(sum);
 
-showCarName("kia");
+const getNotes = require("./note");
+console.log(getNotes());
 
-console.log("hhh");
+const {shuffle,random}= require("lodash")
+const abc_ar = ["a", "b", "c", "d"];
+const shuffle_arr=shuffle(abc_ar);
+const rnd=random(4,10)
+
+console.log(abc_ar);
+console.log(shuffle_arr);
+console.log(rnd);
