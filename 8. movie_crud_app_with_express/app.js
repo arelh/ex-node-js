@@ -29,12 +29,12 @@ const addMovies = (req, res) => {
 };
 
 
-const change =  myJson.map(obj => {
-    if (obj.id == 1) {
-    return {obj, title: 'fffffff'};
-    }
-    return obj;
-    })
+// const change =  myJson.map(obj => {
+//     if (obj.id == 1) {
+//     return {obj, title: 'fffffff'};
+//     }
+//     return obj;
+//     })
 
 
 
@@ -42,8 +42,7 @@ const change =  myJson.map(obj => {
 //myJson
 
 const editMovies = (req, res) => {
-  const { id } = req.params;
-  data = data.filter((movies) => movies.id !== +id); //edit the value
+ 
   fs.writeFileSync("./db/movies.json", JSON.stringify(data)); //convert js object to json
   res.status(201).send(`User with id ${id} has been edited`);
 };
